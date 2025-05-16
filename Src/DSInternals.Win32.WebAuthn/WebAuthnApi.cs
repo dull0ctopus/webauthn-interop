@@ -640,7 +640,8 @@ namespace DSInternals.Win32.WebAuthn
                             ClientDataJson = clientDataNative.ClientDataRaw,
                             AuthenticatorData = assertion.AuthenticatorData,
                             Signature = assertion.Signature,
-                            UserHandle = assertion.UserId
+                            UserHandle = assertion.UserId,
+                            CredentialId = assertion.Credential.Id,
                         };
                     }
                     finally

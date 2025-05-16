@@ -30,5 +30,11 @@ namespace DSInternals.Win32.WebAuthn
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonConverter(typeof(Base64UrlConverter))]
         public byte[] UserHandle { get; set; }
+
+        /// <summary>
+        /// This attribute contains the id of the credential that was used for this assertion.
+        /// </summary>
+        [JsonConverter(typeof(Base64UrlConverter))]
+        public byte[] CredentialId { get; set; }
     }
 }
